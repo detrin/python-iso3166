@@ -205,7 +205,6 @@ _records = [
         "Korea, Democratic People's Republic of",
     ),
     Country("Korea, Republic of", "KR", "KOR", "410", "Korea, Republic of"),
-    Country("Kosovo", "XK", "XKX", "983", "Kosovo"),
     Country("Kuwait", "KW", "KWT", "414", "Kuwait"),
     Country("Kyrgyzstan", "KG", "KGZ", "417", "Kyrgyzstan"),
     Country(
