@@ -1,0 +1,29 @@
+name: Weekly Check of ISO 3166-1
+
+on:
+  schedule:
+    - cron: '0 0 * * MON'
+
+jobs:
+  run_check_script:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    
+    - name: Set up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+    
+    - name: Install dependencies
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        pip install -r scripts/requirements.txt
+    
+    - name: Run check.py
+      run: |
+        source .venv/bin/activate
+        python scripts/check.py
